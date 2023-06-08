@@ -4,6 +4,7 @@ type Person = {
     firstName: string;
     lastName: string;
     age: number;
+    address?: string;       // optional
     isLegal: boolean;
 };
 
