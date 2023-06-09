@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Customer from "./components/Customer";
 
 function App() {
+
+  const [title, setTitle] = useState("Practical React Enterprise");
+  
   const handleAlert = () => {
     alert("I'm a button!");
   };
 
-  const [title, setTitle] = useState("Practical React Enterprise");
+  useEffect(() => {
+    setTitle("Updating the React Enterprise using useEffect");
+  }, [title]);
+
+  
   return (
     <div className="App">
       <button
